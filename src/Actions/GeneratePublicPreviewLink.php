@@ -34,7 +34,7 @@ class GeneratePublicPreviewLink extends Action
     {
         foreach ($items as $item) {
             EntryPublicPreview::updateOrCreate(
-                ['entry_id' => $item->id()], // Search array
+                ['entry_id' => $item->id()],
                 ['valid_until' => now()->addSeconds(config('statamic-public-preview.valid_for'))] // Update or Create array
             );
         }
@@ -43,7 +43,6 @@ class GeneratePublicPreviewLink extends Action
     public function redirect($items, $values)
     {
         $publicPreview = EntryPublicPreview::firstWhere('entry_id', '=', $items[0]->id());
-
         return route('cms.public-preview', ['id' => $publicPreview->id]);
     }
 }

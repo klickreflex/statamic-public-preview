@@ -17,6 +17,7 @@ class EntryPublicPreview extends Model
 
     protected $fillable = [
         'valid_until',
+        'entry_id',
     ];
 
     public function getConnectionName()

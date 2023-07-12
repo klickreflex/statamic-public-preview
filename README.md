@@ -3,7 +3,14 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+## Big thanks to  [Links Der Isar company](https://www.linksderisar.com/)! They thought of this idea and I just implemented it.
+
+
 Statamic Public Preview is a package that provides an action for generating public preview links for your Statamic websites. With this package, you can easily share a temporary preview of your site's content with clients, stakeholders, or team members without granting them full access.
+
+### This package is using additional table to store the preview links. It is not using the Statamic's native preview functionality. Because of this we are able to handle large amount of entries and collections.
+
+
 
 ## Installation
 
