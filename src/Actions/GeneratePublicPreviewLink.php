@@ -35,7 +35,10 @@ class GeneratePublicPreviewLink extends Action
         foreach ($items as $item) {
             EntryPublicPreview::updateOrCreate(
                 ['entry_id' => $item->id()],
-                ['valid_until' => now()->addSeconds(config('statamic-public-preview.valid_for'))] // Update or Create array
+                [
+                    'valid_until' => now()->addSeconds(config('statamic-public-preview.valid_for')),
+                    'entry_id' => $item->id()
+                ] // Update or Create array
             );
         }
     }
